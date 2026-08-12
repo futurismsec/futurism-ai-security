@@ -20,18 +20,6 @@ In practice, some of that information leaks back out. Model inversion attacks ex
 
 A simplified version, for a classifier:
 
-```python
-# Naive illustration of the attack pattern (not a working exploit)
-# An attacker with query access iteratively refines a candidate input
-# to maximize the model's confidence for a target class,
-# effectively reconstructing a representative training example.
-
-candidate = random_init()
-for step in range(N_STEPS):
-    confidence = model.predict_proba(candidate)[target_class]
-    candidate = gradient_ascent_step(candidate, confidence)
-# candidate now resembles training data for `target_class`
-```
 
 For generative models — the ones most teams are shipping right now the risk looks different but rhymes: a model fine-tuned on internal documents or customer conversations can, under the right prompting, reproduce fragments of that data almost verbatim.
 
