@@ -3,8 +3,8 @@
 
 > Part of an ongoing series on AI security fundamentals.
 > Previously:
-> - **Substack** — [Data Poisoning: The Quiet Threat Undermining AI From the Inside] (https://yourname.substack.com/p/data-poisoning-the-quiet-ai-threat) *(replace with your published URL)*
-> - **Hash node** — [Validate Before You Train: The One Habit That Stops AI From Learning the Wrong Thing] (https://hashnode.com/your-username/validate-before-you-train) *(replace with your published URL)*
+> - **Substack** — [Data Poisoning: The Quiet Threat Undermining AI From the Inside] (https://futurismsecurity.substack.com/p/data-poisoning-the-quiet-threat-undermining?r=8s78gn&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
+> - **Hash node** — [Validate Before You Train: The One Habit That Stops AI From Learning the Wrong Thing] (https://futurismsecurity.hashnode.dev/validate-before-you-train-the-one-habit-that-stops-ai-from-learning-the-wrong-thing) 
 
 ---
 
@@ -16,7 +16,7 @@ You don't need to breach a database to pull this off. You just need API access a
 
 A model trained on sensitive data medical records, proprietary source, private messages doesn't store that data in a neat, retrievable table. It compresses patterns from that data into weights. In theory, the raw examples are gone once training finishes.
 
-In practice, some of that information leaks back out. Model inversion attacks exploit this by repeatedly querying a model and using its outputs confidence scores, probability distributions, generated text  to statistically reconstruct details about what it was trained on.
+In practice, some of that information leaks back out. Model inversion attacks exploit this by repeatedly querying a model and using its outputs confidence scores, probability distributions, generated text to statistically reconstruct details about what it was trained on.
 
 A simplified version, for a classifier:
 
